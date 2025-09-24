@@ -1,6 +1,6 @@
 export const Loading = () => {
     return (
-        <div className="font-(family-name:--font-roboto) mx-auto w-full max-w-sm rounded-md p-4">
+        <div className="font-sans mx-auto w-full max-w-sm rounded-md p-4">
             <div className="flex animate-pulse space-x-4">
               <div className="flex-1 space-y-6 py-1">
                 <div className="h-2 rounded bg-gray-200"></div>

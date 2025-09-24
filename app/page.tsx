@@ -23,8 +23,8 @@ export default function Home() {
     setLoading(false);
   };
 
-  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter") {
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
       sendPrompt(prompt);
     }
@@ -46,7 +46,7 @@ export default function Home() {
               id="Prompt"
               name="Prompt"
               rows={4}
-              className="mt-0.5 w-[600] resize-none rounded bg-[#2E2E38] p-2 shadow-sm sm:text-sm dark:border-white-600 dark:bg-white-900" />              
+              className="mt-0.5 w-[600px] resize-none rounded bg-[#2E2E38] p-2 shadow-sm sm:text-sm text-white border border-gray-600" />              
         </div>
       </main>
       <footer className="w-full fixed bottom-0 row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
