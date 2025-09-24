@@ -2,7 +2,14 @@
 
 :root {
   --background: #171717;
-  --foreground: #DEDEE2;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-roboto);
+  --font-mono: var(--font-roboto);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,5 +22,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
