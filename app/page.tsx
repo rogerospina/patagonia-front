@@ -46,10 +46,10 @@ export default function Home() {
         { questions.length > 0 && questions.reverse().map((quest, index) => (
           <div key={index}>
             <div>
-              <div  key={`ques_${quest}_${index}`} className="font-(family-name:--font-roboto) w-[600] rounded-md p-4">{quest}</div>
+              <div  key={`ques_${quest}_${index}`} className="font-sans w-[600px] rounded-md p-4">{quest}</div>
             </div>
             
-            {responses[index] ? <div key={`resp_${quest}_${index}`} className="font-(family-name:--font-roboto) w-[600] rounded-md p-4 bg-[#23232f]">
+            {responses[index] ? <div key={`resp_${quest}_${index}`} className="font-sans w-[600px] rounded-md p-4 bg-[#23232f]">
               <div className="font-bold flex">Response <span className="w-2"></span> {responses[index].guardrail.status === "Blocked" ? <div className="text-[#cb8435]">Potential risk detected</div> :  <div className="text-[#5ba77a]">Sanitized</div>}</div>
              
               <div>{responses[index].guardrail.filtered_response}</div>
